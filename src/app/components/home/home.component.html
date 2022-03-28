@@ -1,0 +1,25 @@
+<div class="container-fluid page">
+    <div class=" page_box p-3 mt-2">Admin Dashboard</div>
+        <div class="elements" >
+          <div>
+        <!--Search box for the users to search/filter the employee name-->
+            <label id="search-area">Search name here...: </label>
+            <input type="text" (keyup)="search($event)" placeholder="enter name" class="input">
+          </div>
+        </div>
+        <p id="emp-header">Employee Details</p>
+        <hr>
+        <h4>Employee's name displayed here</h4>
+        <p>Click on the name to get the Employee details</p>
+        <div class="row itemsBlock">
+          <div *ngFor="let employeesource of employeeSource" style="margin-top:20px"  class="col-md-4 col-sm-6 col-12">
+            <app-employee-detail [Employee]='employeesource._source'></app-employee-detail>
+          </div>
+          </div>
+          <div *ngIf="employeeSource?.length < 1" style="margin-top:20px">
+            <div class="alert alert-primary" role="alert">
+              Data not available!
+            </div>
+          </div> 
+</div>
+<!--https://ng.ant.design/components/menu/en-->

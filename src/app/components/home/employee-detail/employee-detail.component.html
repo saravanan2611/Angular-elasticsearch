@@ -1,0 +1,33 @@
+<div *ngIf="Employee">
+  <img src="{{Employee.image}}" id="dashboard-image" (click)="openDetails(contentDetails, Employee)">
+  <div class="card-body">
+    <div (click)="openDetails(contentDetails, Employee)" id="emp-name">{{Employee.name}}</div>
+  </div>
+</div>
+    
+    <!--Modal Class to project the selected employee's details-->
+    <ng-template #contentDetails let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Selected Employee detail</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--<div class="modal-body" >
+              <div><img src="{{Employee.image}}" class="center"><br></div>
+              <div style="text-align:center">Employee ID: {{Employee.id}}<br></div>
+              <div style="text-align:center">Employee Name: {{Employee.name}}</div>
+        </div>-->
+        <div class="row" >
+          <div class="column"><img src="{{Employee.image}}" class="center"><br></div>
+          <div class="column">
+            <br><br><br>
+            <div class="modal-emp-id">Employee ID: {{Employee.id}}<br></div>
+            <div class="modal-emp-name">Employee Name: {{Employee.name}}</div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
+        </div>
+    </ng-template>
+    

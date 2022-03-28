@@ -1,0 +1,45 @@
+
+.bcontent{
+    margin-top: 10px;
+
+}
+
+#dashboard-image{
+    height:50%;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#emp-name{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    text-align: center;
+}
+img{
+    border: 1px;
+   /* padding: 5px;*/
+    width: 80%;
+    height:fit-content;
+}
+
+.center-center {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px ;
+    padding: 10px;
+  }
+
+.my-flex-card > div > div.card {
+    height: calc(100% - 15px);
+    margin-bottom: 15px;
+}
